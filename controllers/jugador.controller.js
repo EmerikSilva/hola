@@ -12,6 +12,7 @@ jugadorController.addJugador = async(req, res)=>{
    res.json({'status':'El jugador se ha añadido correctamente' });
 };
 
+// funcion para eliminar
 jugadorController.deleteJugador = async(req,res)=>{
     await jugadorModel.findByIdAndDelete(req.params.id);
     res.json({ status: 'El jugador se ha eliminado correctamente'});
